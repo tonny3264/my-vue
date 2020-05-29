@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手撕vue</title>
+</head>
+<body>
+  <div id="app">
+    hello {{ content }} , {{age}}, {{ obj.x }}
+    <span>{{ age }}</span>
+  </div>
+  <!-- <script src="./core/vue.js" type="module"></script> -->
+  <script type="module" type="module">
+    import Vue from "./core/vue.js"
+    window.app = new Vue({
+      el: "app",
+      data: {
+        content: "vue",
+        age: 18,
+        obj: {x:1, y: 2},
+        arr: [1, 3]
+      }
+    })
+  </script>
+</body>
+</html>
